@@ -66,34 +66,6 @@
       to { transform: rotate(360deg); }
     }
 
-    /* imagen-futurista (IMAGEN REDUCIDA) */
-    .imagen-futurist {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
-      border-top: 2px solid var(--borde);
-      border-bottom: 2px solid var(--borde);
-      overflow: hidden;
-    }
-
-    .imagen-futurista img {
-      width: 60%;          /* 🔥 REDUCIDO */
-      max-height: 160px;   /* 🔥 REDUCIDO */
-      object-fit: contain;
-      animation: mover 18s infinite linear, brillo 10s infinite alternate ease-in-out;
-    }
-
-    @keyframes mover {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-10%); }
-    }
-
-    @keyframes brillo {
-      0% { filter: hue-rotate(0deg) brightness(1); }
-      100% { filter: hue-rotate(45deg) brightness(1.3); }
-    }
-
     /* INSIGNIA EPTI */
     .insignia-epti {
       display: flex;
@@ -208,9 +180,8 @@
         height: 120px;
       }
 
-      .imagen-futurista img {
-        width: 80%;
-        max-height: 150px;
+      .insignia-epti img {
+        width: 150px;
       }
     }
 
@@ -219,17 +190,14 @@
         width: 100px;
         height: 100px;
       }
-
-      .imagen-futurista img {
-        width: 90%;
-        max-height: 130px;
-      }
     }
-
   </style>
 </head>
 
 <body>
+
+  <!-- CANVAS DE PARTÍCULAS -->
+  <canvas id="particles"></canvas>
 
   <!-- ENCABEZADO -->
   <header class="encabezado">
@@ -239,9 +207,7 @@
       <img src="acreditacion-nueva.png" alt="Acreditación Nueva" class="anim-giro">
     </div>
 
-    <div class="imagen-futurista">
-      <img src="imagen-futurista.jpg" alt="Imagen futurista">
-    </div>
+    <!-- Banner futurista eliminado -->
 
     <div class="insignia-epti">
       <img src="insignia-epti.png" alt="Insignia EPTI">
@@ -253,26 +219,10 @@
     <h2>Perfil Profesional</h2>
 
     <div class="card">
-      <p>
-        Tecnóloga en Informática Biomédica y TENS con 16 años de experiencia clínica y 
-        trayectoria reciente en soporte e implementación de sistemas HIS (TrakCare).
-      </p>
-
-      <p>
-        Especialista en gestión de incidencias bajo metodologías ITIL, levantamiento de 
-        requerimientos, documentación funcional y capacitación masiva de usuarios 
-        clínicos y administrativos.
-      </p>
-
-      <p>
-        Conocimientos en interoperabilidad y estándares (HL7, FHIR, CIE‑11, SNOMED CT), 
-        con base en SQL y Excel avanzado para análisis y mejora operativa.
-      </p>
-
-      <p>
-        Orientada a roles de Analista/Consultora HIS, Analista de Información/BI o 
-        Proyectos TI en Salud.
-      </p>
+      <p>Tecnóloga en Informática Biomédica y TENS con 16 años de experiencia clínica y trayectoria reciente en soporte e implementación de sistemas HIS (TrakCare).</p>
+      <p>Especialista en gestión de incidencias bajo metodologías ITIL, levantamiento de requerimientos, documentación funcional y capacitación masiva de usuarios clínicos y administrativos.</p>
+      <p>Conocimientos en interoperabilidad y estándares (HL7, FHIR, CIE‑11, SNOMED CT), con base en SQL y Excel avanzado para análisis y mejora operativa.</p>
+      <p>Orientada a roles de Analista/Consultora HIS, Analista de Información/BI o Proyectos TI en Salud.</p>
     </div>
   </section>
 
@@ -425,3 +375,4 @@
 
 </body>
 </html>
+
